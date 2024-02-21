@@ -4,15 +4,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
     <header>
-    <img src="@/assets/images/shared/logo.svg" alt="logo">
-
+      <img src="@/assets/images/shared/logo.svg" alt="logo">
+      <hr>
       <nav>
-        <RouterLink class="li" to="/">00 Home</RouterLink>
-        <RouterLink class="li" to="/destination">01 Destination</RouterLink>
-        <RouterLink class="li" to="/crew">02 Crew</RouterLink>
-        <RouterLink class="li" to="/technology">03 Technology</RouterLink>
+        <RouterLink class="li" :class="{'active':$route.path === '/'}" to="/">00 HOME</RouterLink>
+        <RouterLink class="li" :class="{'active':$route.path === '/destination'}" to="/destination">01 DESTINATION</RouterLink>
+        <RouterLink class="li" :class="{'active':$route.path === '/crew'}" to="/crew">02 CREW</RouterLink>
+        <RouterLink class="li" :class="{'active':$route.path === '/technology'}" to="/technology">03 TECHNOLOGY</RouterLink>
       </nav>
-      
   </header>
   <RouterView />
 </template>
@@ -20,19 +19,42 @@ import { RouterLink, RouterView } from 'vue-router'
 <style scoped>
 header{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background-color: transparent;
   position: absolute;
   top: 0;
-  z-index: 9;
   width: 100%;
-  padding: 1rem;
+  padding-top: 2rem;
   color: aliceblue;
+}
+
+img{
+  padding-left: 3rem;
+}
+
+hr{
+  height: 1px;
+  width: 600px;
+  position: absolute;
+  right: 610px;
+  z-index: 1;
 }
 
 nav{
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 1rem 6rem 1rem 7rem;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.096);
+}
+
+.li{
+    font-family: "Poppins", serif;
+    font-size: .9rem;
+}
+
+.li.active{
+  border-bottom: 1px solid white;
 }
 </style>

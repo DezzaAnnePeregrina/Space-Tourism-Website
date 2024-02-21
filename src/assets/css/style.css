@@ -6,10 +6,20 @@ main{
     padding-top: 5rem;
     height: 100vh;
     color: white;
-  }
+    font-family: "Montserrat", serif;
+}
 
-.li{
-    border-bottom: 1px solid white;
+h1, span{
+    font-family: "Merriweather", serif;
+}
+
+h1{
+    font-size: 7rem;
+    text-align: justify;
+}
+
+p{
+    text-align: justify;
 }
 
 .intro, .circle{
@@ -18,4 +28,5 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    gap: 1rem;
 }
