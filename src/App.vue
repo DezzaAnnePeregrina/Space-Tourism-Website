@@ -41,6 +41,7 @@ hr{
   z-index: 1;
 }
 
+
 nav{
   display: flex;
   gap: 2rem;
@@ -52,6 +53,7 @@ nav{
 .li{
     font-family: "Poppins", serif;
     font-size: .9rem;
+    min-width: 40px;
 }
 
 .li.active{
