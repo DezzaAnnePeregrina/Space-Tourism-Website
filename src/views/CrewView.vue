@@ -33,14 +33,14 @@ export default{
 </script>
 
 <template>
-    <main class="crew flex flex-col">
+    <main class="crew flex flex-col justify-center items-center">
         <div class="flex gap-1">
             <div class="button" :class="{'active':selectedAstronaut === astronaut}" v-for="astronaut in astronauts" :key="astronaut.name" @click="showAstronaut(astronaut)"></div>
         </div>
 
         <div v-if="selectedAstronaut">
             <h2>{{ selectedAstronaut.name }}</h2>
-            <img :src="selectedAstronaut.images.png" :alt="selectedAstronaut.name" style="max-width: 200px;">
+            <img :src="selectedAstronaut.images.webp" :alt="selectedAstronaut.name" style="max-width: 200px;">
         </div>
         
     </main>
