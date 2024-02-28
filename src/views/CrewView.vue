@@ -40,7 +40,7 @@ export default{
 
         <div v-if="selectedAstronaut">
             <h2>{{ selectedAstronaut.name }}</h2>
-            <img :src="selectedAstronaut.images.webp" :alt="selectedAstronaut.name" style="max-width: 200px;">
+            <img :src="selectedAstronaut.images.png" :alt="selectedAstronaut.name" style="max-width: 200px;">
         </div>
         
     </main>
