@@ -16,7 +16,7 @@
 
 <style>
 .home{
-  background-image: url(../assets/images/background-home-desktop.jpg);
+  background-image: url(../assets/images/home/background-home-desktop.jpg);
 }
 
 .circle span{

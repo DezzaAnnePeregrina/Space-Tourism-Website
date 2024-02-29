@@ -56,5 +56,4 @@ export default{
 .crew{
     background-image: url(../assets/images/crew/background-crew-desktop.jpg);
 }
-
 </style>
