@@ -41,12 +41,5 @@ nav{
   background: rgba(255, 255, 255, 0.096);
 }
 
-.li{
-    font-family: "Poppins", serif;
-    font-size: .9rem;
-    min-width: 40px;
-}
-.li.active{
-  border-bottom: 1px solid white;
-}
+
 </style>

@@ -33,16 +33,22 @@ export default{
 </script>
 
 <template>
-    <main class="crew flex flex-col justify-center items-center">
-        <div class="flex gap-1">
-            <div class="button" :class="{'active':selectedAstronaut === astronaut}" v-for="astronaut in astronauts" :key="astronaut.name" @click="showAstronaut(astronaut)"></div>
-        </div>
-
+    <main class="crew flex flex-col justify-center items-center gap-4">
+        <p>02 Meet your crew</p>
         <div v-if="selectedAstronaut">
-            <h2>{{ selectedAstronaut.name }}</h2>
             <img :src="selectedAstronaut.images.png" :alt="selectedAstronaut.name" style="max-width: 200px;">
         </div>
-        
+
+        <div class="flex gap-4">
+            <div class="button rounded-full" :class="{'active':selectedAstronaut === astronaut}" v-for="astronaut in astronauts" :key="astronaut.name" @click="showAstronaut(astronaut)"></div>
+        </div>
+
+        <div class="details flex flex-col justify-center items-center gap-4" v-if="selectedAstronaut">
+            <p>{{ selectedAstronaut.role.toUpperCase() }}</p>
+            <p>{{ selectedAstronaut.name.toUpperCase() }}</p>
+
+            <p>{{ selectedAstronaut.bio }}</p>
+        </div>
     </main>
 </template>
 
@@ -51,13 +57,4 @@ export default{
     background-image: url(../assets/images/crew/background-crew-desktop.jpg);
 }
 
-.button{
-    background-color: gray;
-    width: 20px;
-    height: 20px;
-}
-
-.button.active{
-    background-color: antiquewhite;
-}
 </style>

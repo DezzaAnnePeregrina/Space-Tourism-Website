@@ -3,10 +3,22 @@
 @tailwind utilities;
 
 main{
-    padding-top: 5rem;
-    height: 100vh;
+    background-repeat: no-repeat;
+    padding: 7rem 0 3rem 0;
+    min-height: 100vh;
+    width: 100%;
     color: white;
     font-family: "Montserrat", serif;
+}
+
+.li, li{
+    font-family: "Poppins", serif;
+    font-size: .9rem;
+    min-width: 40px;
+    cursor: pointer;
+}
+.li.active, li.active{
+  border-bottom: 1px solid white;
 }
 
 h1, span{
@@ -18,6 +30,12 @@ h1{
     text-align: justify;
 }
 
+h2{
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    min-width: 40px;
+}
+
 p{
     text-align: justify;
 }
@@ -25,4 +43,19 @@ p{
 .intro, .circle{
     width: 450px;
     height: 300px;
+}
+
+.button{
+    background-color: gray;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.button.active{
+    background-color: antiquewhite;
+}
+
+.details{
+    max-width: 500px;
 }
