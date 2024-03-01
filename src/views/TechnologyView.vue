@@ -37,24 +37,33 @@ export default{
         <p>03 Space launch 101</p>
 
         <div v-if="selectedTechnologies">
-            <img :src="selectedTechnologies.images.portrait" :alt="selectedTechnologies.name" style="max-width: 300px;">
-        </div>
+            <img :src="selectedTechnologies.images.portrait" :alt="selectedTechnologies.name" style="max-width: 300px;"></div>
 
         <div class="flex gap-4">
-            <div class="button rounded-full" style="color:black" :class="{'active':selectedTechnologies === technology}" v-for="technology in getTechnologies" :key="technology.name" @click="showTechnology(technology)">{{ technology.num }}</div>
+            <div class="button" style="color:black" :class="{'active':selectedTechnologies === technology}" v-for="technology in getTechnologies" :key="technology.name" @click="showTechnology(technology)">{{ technology.num }}</div>
         </div>
         
-        <div class="intro" v-if="selectedTechnologies">
+        <div class="details flex flex-col justify-center items-center" v-if="selectedTechnologies">
             <h2>{{selectedTechnologies.name}}</h2>
             <p>{{selectedTechnologies.description}}</p>
         </div>
     </main>
 </template>
 
-
-
 <style>
 .technology{
     background-image: url(../assets/images/technology/background-technology-desktop.jpg);
 }
+
+@media only screen and (max-width: 800px) {
+    .technology{
+      background-image: url(../assets/images/technology/background-technology-tablet.jpg);
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .technology{
+      background-image: url(../assets/images/technology/background-technology-mobile.jpg);
+    }
+  }
 </style>

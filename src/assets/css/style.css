@@ -4,6 +4,7 @@
 
 main{
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 7rem 0 3rem 0;
     min-height: 100vh;
     width: 100%;
@@ -11,13 +12,14 @@ main{
     font-family: "Montserrat", serif;
 }
 
-.li, li{
+.li{
     font-family: "Poppins", serif;
     font-size: .9rem;
     min-width: 40px;
     cursor: pointer;
 }
-.li.active, li.active{
+
+.li.active{
   border-bottom: 1px solid white;
 }
 
@@ -58,4 +60,9 @@ p{
 
 .details{
     max-width: 500px;
+    
+}
+
+.details p{
+    text-align: center;
 }

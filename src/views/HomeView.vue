@@ -24,4 +24,21 @@
   color: black;
   border-radius: 100%;
 }
+
+@media only screen and (max-width: 800px) {
+    .home{
+      background-image: url(../assets/images/home/background-home-tablet.jpg);
+    }
+
+    .circle{
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .home{
+      background-image: url(../assets/images/home/background-home-mobile.jpg);
+    }
+  }
 </style>

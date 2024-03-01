@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <header class="flex flex-wrap justify-between items-center pt-8">
+    <header class="flex flex-wrap justify-between items-center pt-3">
       <img class="pl-10" src="@/assets/images/shared/logo.svg" alt="logo">
       <hr>
       <nav class="flex gap-5">
@@ -40,6 +40,4 @@ nav{
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.096);
 }
-
-
 </style>

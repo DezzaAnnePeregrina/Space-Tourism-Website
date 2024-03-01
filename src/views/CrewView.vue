@@ -33,7 +33,7 @@ export default{
 </script>
 
 <template>
-    <main class="crew flex flex-col justify-center items-center gap-4">
+    <main class="crew flex flex-col justify-center items-center gap-10">
         <p>02 Meet your crew</p>
         <div v-if="selectedAstronaut">
             <img :src="selectedAstronaut.images.png" :alt="selectedAstronaut.name" style="max-width: 200px;">
@@ -56,4 +56,16 @@ export default{
 .crew{
     background-image: url(../assets/images/crew/background-crew-desktop.jpg);
 }
+
+@media only screen and (max-width: 800px) {
+    .crew{
+      background-image: url(../assets/images/crew/background-crew-tablet.jpg);
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .crew{
+      background-image: url(../assets/images/crew/background-crew-mobile.jpg);
+    }
+  }
 </style>
